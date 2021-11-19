@@ -1,32 +1,32 @@
 //
-//  CategoriesService.swift
+//  ItemService.swift
 //  leboncoin
 //
-//  Created by Arnaud Dalbin on 19/11/2021.
+//  Created by Arnaud Dalbin on 18/11/2021.
 //
 
 import Foundation
 
-class CategoriesService {
+class AdService {
     
     // MARK: - Properties
     
     // URLSession
-    var categoriesSession = URLSession(configuration: .default)
+    var adSession = URLSession(configuration: .default)
     // URLSessionDataTask
     var task: URLSessionDataTask?
     // initialize URLSession
-    init(categoriesSession: URLSession = URLSession(configuration: .default)) {
-        self.categoriesSession = categoriesSession
+    init(adSession: URLSession = URLSession(configuration: .default)) {
+        self.adSession = adSession
     }
     
     // MARK: - Methods
     
     // send a request to Leboncoin API and return this response
-    func getCategories(completionHandler: @escaping (Categories?, Swift.Error?) -> Void) {
+    func getAds(completionHandler: @escaping ([Ad]?, Swift.Error?) -> Void) {
         // call
         guard let request = URL(string: "https://raw.githubusercontent.com/leboncoin/paperclip/master/listing.json") else { return }
-        task = categoriesSession.dataTask(with: request) {(data, rresponse, error) in DispatchQueue.main.async {
+        task = adSession.dataTask(with: request) {(data, rresponse, error) in DispatchQueue.main.async {
             // check error
             guard error == nil else {
                 completionHandler(nil, ErrorCases.failure)
@@ -44,10 +44,13 @@ class CategoriesService {
             }
             // check response JSON
             do {
-                let responseJSON = try JSONDecoder().decode(Categories.self, from: data)
+                let responseJSON = try JSONDecoder().decode([Ad].self, from: data)
                 completionHandler(responseJSON, nil)
-            } catch {
+            } catch let jsonError as NSError {
                 completionHandler(nil, ErrorCases.errorDecode)
+                print("JSON decode failed: \(jsonError.localizedDescription)")
+                print(String(describing: error))
+                print(String(describing: jsonError))
             }
         }
         }

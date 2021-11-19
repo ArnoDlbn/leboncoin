@@ -9,18 +9,21 @@
 /* Begin PBXBuildFile section */
 		510B029C27469954002F4B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B029B27469954002F4B88 /* AppDelegate.swift */; };
 		510B029E27469954002F4B88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B029D27469954002F4B88 /* SceneDelegate.swift */; };
-		510B02A027469954002F4B88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B029F27469954002F4B88 /* ViewController.swift */; };
 		510B02A527469957002F4B88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 510B02A427469957002F4B88 /* Assets.xcassets */; };
 		510B02A827469957002F4B88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 510B02A627469957002F4B88 /* LaunchScreen.storyboard */; };
 		510B02B327469957002F4B88 /* leboncoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02B227469957002F4B88 /* leboncoinTests.swift */; };
 		510B02BD27469957002F4B88 /* leboncoinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02BC27469957002F4B88 /* leboncoinUITests.swift */; };
 		510B02BF27469957002F4B88 /* leboncoinUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02BE27469957002F4B88 /* leboncoinUITestsLaunchTests.swift */; };
-		510B02CD2746B077002F4B88 /* Ads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02CC2746B077002F4B88 /* Ads.swift */; };
-		510B02CF2746B1E4002F4B88 /* AdsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02CE2746B1E4002F4B88 /* AdsService.swift */; };
+		510B02CD2746B077002F4B88 /* Ad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02CC2746B077002F4B88 /* Ad.swift */; };
+		510B02CF2746B1E4002F4B88 /* AdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02CE2746B1E4002F4B88 /* AdService.swift */; };
 		510B02D22746B322002F4B88 /* ErrorCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02D12746B322002F4B88 /* ErrorCases.swift */; };
-		510B02D42747EB4E002F4B88 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02D32747EB4E002F4B88 /* Categories.swift */; };
-		510B02D62747EBDA002F4B88 /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02D52747EBDA002F4B88 /* CategoriesService.swift */; };
+		510B02D42747EB4E002F4B88 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02D32747EB4E002F4B88 /* Category.swift */; };
+		510B02D62747EBDA002F4B88 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02D52747EBDA002F4B88 /* CategoryService.swift */; };
 		510B02D92747ED69002F4B88 /* AdDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02D82747ED69002F4B88 /* AdDetailView.swift */; };
+		5174B89E2747F4A800F81BCF /* AdsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174B89D2747F4A800F81BCF /* AdsTableViewController.swift */; };
+		5174B8A02747F58E00F81BCF /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174B89F2747F58E00F81BCF /* UIViewController.swift */; };
+		5174B8A22747F6EA00F81BCF /* AdDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174B8A12747F6EA00F81BCF /* AdDetailViewController.swift */; };
+		5174B8A4274809AF00F81BCF /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174B8A3274809AF00F81BCF /* AdTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +47,6 @@
 		510B029827469954002F4B88 /* leboncoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leboncoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		510B029B27469954002F4B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		510B029D27469954002F4B88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		510B029F27469954002F4B88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		510B02A427469957002F4B88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		510B02A727469957002F4B88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		510B02A927469957002F4B88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,12 +55,16 @@
 		510B02B827469957002F4B88 /* leboncoinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = leboncoinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		510B02BC27469957002F4B88 /* leboncoinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leboncoinUITests.swift; sourceTree = "<group>"; };
 		510B02BE27469957002F4B88 /* leboncoinUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leboncoinUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		510B02CC2746B077002F4B88 /* Ads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ads.swift; sourceTree = "<group>"; };
-		510B02CE2746B1E4002F4B88 /* AdsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsService.swift; sourceTree = "<group>"; };
+		510B02CC2746B077002F4B88 /* Ad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ad.swift; sourceTree = "<group>"; };
+		510B02CE2746B1E4002F4B88 /* AdService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdService.swift; sourceTree = "<group>"; };
 		510B02D12746B322002F4B88 /* ErrorCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCases.swift; sourceTree = "<group>"; };
-		510B02D32747EB4E002F4B88 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
-		510B02D52747EBDA002F4B88 /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		510B02D32747EB4E002F4B88 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		510B02D52747EBDA002F4B88 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		510B02D82747ED69002F4B88 /* AdDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDetailView.swift; sourceTree = "<group>"; };
+		5174B89D2747F4A800F81BCF /* AdsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsTableViewController.swift; sourceTree = "<group>"; };
+		5174B89F2747F58E00F81BCF /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		5174B8A12747F6EA00F81BCF /* AdDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDetailViewController.swift; sourceTree = "<group>"; };
+		5174B8A3274809AF00F81BCF /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +115,12 @@
 		510B029A27469954002F4B88 /* leboncoin */ = {
 			isa = PBXGroup;
 			children = (
+				5174B89C2747F46D00F81BCF /* Controller */,
 				510B02D72747ED39002F4B88 /* View */,
 				510B02D02746B246002F4B88 /* Extension */,
 				510B02CB2746B05E002F4B88 /* Model */,
 				510B029B27469954002F4B88 /* AppDelegate.swift */,
 				510B029D27469954002F4B88 /* SceneDelegate.swift */,
-				510B029F27469954002F4B88 /* ViewController.swift */,
 				510B02A427469957002F4B88 /* Assets.xcassets */,
 				510B02A627469957002F4B88 /* LaunchScreen.storyboard */,
 				510B02A927469957002F4B88 /* Info.plist */,
@@ -142,10 +148,10 @@
 		510B02CB2746B05E002F4B88 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				510B02CC2746B077002F4B88 /* Ads.swift */,
-				510B02CE2746B1E4002F4B88 /* AdsService.swift */,
-				510B02D32747EB4E002F4B88 /* Categories.swift */,
-				510B02D52747EBDA002F4B88 /* CategoriesService.swift */,
+				510B02CC2746B077002F4B88 /* Ad.swift */,
+				510B02CE2746B1E4002F4B88 /* AdService.swift */,
+				510B02D32747EB4E002F4B88 /* Category.swift */,
+				510B02D52747EBDA002F4B88 /* CategoryService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				510B02D12746B322002F4B88 /* ErrorCases.swift */,
+				5174B89F2747F58E00F81BCF /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -162,8 +169,18 @@
 			isa = PBXGroup;
 			children = (
 				510B02D82747ED69002F4B88 /* AdDetailView.swift */,
+				5174B8A3274809AF00F81BCF /* AdTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5174B89C2747F46D00F81BCF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5174B89D2747F4A800F81BCF /* AdsTableViewController.swift */,
+				5174B8A12747F6EA00F81BCF /* AdDetailViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,15 +313,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				510B02CD2746B077002F4B88 /* Ads.swift in Sources */,
-				510B02D62747EBDA002F4B88 /* CategoriesService.swift in Sources */,
-				510B02D42747EB4E002F4B88 /* Categories.swift in Sources */,
-				510B02A027469954002F4B88 /* ViewController.swift in Sources */,
+				510B02CD2746B077002F4B88 /* Ad.swift in Sources */,
+				510B02D62747EBDA002F4B88 /* CategoryService.swift in Sources */,
+				510B02D42747EB4E002F4B88 /* Category.swift in Sources */,
+				5174B8A02747F58E00F81BCF /* UIViewController.swift in Sources */,
 				510B02D92747ED69002F4B88 /* AdDetailView.swift in Sources */,
+				5174B8A22747F6EA00F81BCF /* AdDetailViewController.swift in Sources */,
 				510B029C27469954002F4B88 /* AppDelegate.swift in Sources */,
 				510B029E27469954002F4B88 /* SceneDelegate.swift in Sources */,
 				510B02D22746B322002F4B88 /* ErrorCases.swift in Sources */,
-				510B02CF2746B1E4002F4B88 /* AdsService.swift in Sources */,
+				5174B89E2747F4A800F81BCF /* AdsTableViewController.swift in Sources */,
+				510B02CF2746B1E4002F4B88 /* AdService.swift in Sources */,
+				5174B8A4274809AF00F81BCF /* AdTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +500,7 @@
 				INFOPLIST_FILE = leboncoin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -509,6 +530,7 @@
 				INFOPLIST_FILE = leboncoin/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

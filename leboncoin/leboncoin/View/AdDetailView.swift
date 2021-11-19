@@ -56,10 +56,10 @@ class AdDetailView: UIView {
         price.text = "Price: "
         addSubview(price)
 
-        adImage = UIImageView(frame: CGRect(x:0, y:92, width:428, height:428))
+        adImage = UIImageView(frame: CGRect(x:0, y:200, width:300, height:300))
         adImage.contentMode = .scaleAspectFit
         adImage.clipsToBounds = true
-        adImage.layer.borderWidth = 3
+        adImage.layer.borderWidth = 1
         adImage.layer.cornerRadius = 10
         adImage.layer.borderColor = UIColor.black.cgColor
         addSubview(adImage)
@@ -81,25 +81,25 @@ class AdDetailView: UIView {
         addSubview(priority)
         
         NSLayoutConstraint.activate([
-            adTitle.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor, constant: 50),
+            adTitle.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor, constant: -5),
             adTitle.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: -5),
 
             adDescription.topAnchor.constraint(equalTo: adTitle.bottomAnchor),
             adDescription.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: -5),
 
-            categorie.topAnchor.constraint(equalTo: adDescription.bottomAnchor, constant: 10),
+            categorie.topAnchor.constraint(equalTo: adDescription.bottomAnchor),
             categorie.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: -5),
             
             price.topAnchor.constraint(equalTo: categorie.bottomAnchor),
             price.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: -5),
 
-            adImage.topAnchor.constraint(equalTo: price.bottomAnchor, constant: 10),
+            adImage.topAnchor.constraint(equalTo: price.bottomAnchor),
             adImage.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: -5),
             
             creationDate.topAnchor.constraint(equalTo: adImage.bottomAnchor),
             creationDate.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: -5),
 
-            priority.topAnchor.constraint(equalTo: creationDate.bottomAnchor, constant: 10),
+            priority.topAnchor.constraint(equalTo: creationDate.bottomAnchor),
             priority.leadingAnchor.constraint(equalTo: self.layoutMarginsGuide.leadingAnchor, constant: -5),
         ])
     }

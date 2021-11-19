@@ -1,32 +1,32 @@
 //
-//  ItemService.swift
+//  CategoriesService.swift
 //  leboncoin
 //
-//  Created by Arnaud Dalbin on 18/11/2021.
+//  Created by Arnaud Dalbin on 19/11/2021.
 //
 
 import Foundation
 
-class AdsService {
+class CategoryService {
     
     // MARK: - Properties
     
     // URLSession
-    var adsSession = URLSession(configuration: .default)
+    var categorySession = URLSession(configuration: .default)
     // URLSessionDataTask
     var task: URLSessionDataTask?
     // initialize URLSession
-    init(adsSession: URLSession = URLSession(configuration: .default)) {
-        self.adsSession = adsSession
+    init(categorySession: URLSession = URLSession(configuration: .default)) {
+        self.categorySession = categorySession
     }
     
     // MARK: - Methods
     
     // send a request to Leboncoin API and return this response
-    func getAds(completionHandler: @escaping (Ads?, Swift.Error?) -> Void) {
+    func getCategories(completionHandler: @escaping ([Category]?, Swift.Error?) -> Void) {
         // call
-        guard let request = URL(string: "https://raw.githubusercontent.com/leboncoin/paperclip/master/listing.json") else { return }
-        task = adsSession.dataTask(with: request) {(data, rresponse, error) in DispatchQueue.main.async {
+        guard let request = URL(string: "https://raw.githubusercontent.com/leboncoin/paperclip/master/categories.json") else { return }
+        task = categorySession.dataTask(with: request) {(data, rresponse, error) in DispatchQueue.main.async {
             // check error
             guard error == nil else {
                 completionHandler(nil, ErrorCases.failure)
@@ -44,10 +44,11 @@ class AdsService {
             }
             // check response JSON
             do {
-                let responseJSON = try JSONDecoder().decode(Ads.self, from: data)
+                let responseJSON = try JSONDecoder().decode([Category].self, from: data)
                 completionHandler(responseJSON, nil)
-            } catch {
+            } catch let jsonError as NSError {
                 completionHandler(nil, ErrorCases.errorDecode)
+                print("JSON decode failed: \(jsonError.localizedDescription)")
             }
         }
         }

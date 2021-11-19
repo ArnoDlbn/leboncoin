@@ -8,22 +8,18 @@
 import Foundation
 
 // structures to manage data
-struct Ads: Decodable {
-    let ads: [Ad]
-}
-
 struct Ad: Decodable {
     let id: Int
-    let categoryId: Category
+    let category_id: Int
     let title: String
     let description: String
     let price: Float
-    let imagesUrl: [AdImage]
-    let creationDate: String
-    let isUrgent: Bool
+    let images_url: AdImage
+    let creation_date: String
+    let is_urgent: Bool
 }
 
 struct AdImage: Decodable {
-    let small: String
-    let thumb: String
+    let small: String?
+    let thumb: String?
 }
