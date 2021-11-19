@@ -14,7 +14,7 @@ struct Ads: Decodable {
 
 struct Ad: Decodable {
     let id: Int
-    let categoryId: Int
+    let categoryId: Category
     let title: String
     let description: String
     let price: Float

@@ -20,6 +20,7 @@
 		510B02D22746B322002F4B88 /* ErrorCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02D12746B322002F4B88 /* ErrorCases.swift */; };
 		510B02D42747EB4E002F4B88 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02D32747EB4E002F4B88 /* Categories.swift */; };
 		510B02D62747EBDA002F4B88 /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02D52747EBDA002F4B88 /* CategoriesService.swift */; };
+		510B02D92747ED69002F4B88 /* AdDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02D82747ED69002F4B88 /* AdDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		510B02D12746B322002F4B88 /* ErrorCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCases.swift; sourceTree = "<group>"; };
 		510B02D32747EB4E002F4B88 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		510B02D52747EBDA002F4B88 /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		510B02D82747ED69002F4B88 /* AdDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		510B029A27469954002F4B88 /* leboncoin */ = {
 			isa = PBXGroup;
 			children = (
+				510B02D72747ED39002F4B88 /* View */,
 				510B02D02746B246002F4B88 /* Extension */,
 				510B02CB2746B05E002F4B88 /* Model */,
 				510B029B27469954002F4B88 /* AppDelegate.swift */,
@@ -153,6 +156,14 @@
 				510B02D12746B322002F4B88 /* ErrorCases.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		510B02D72747ED39002F4B88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				510B02D82747ED69002F4B88 /* AdDetailView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 				510B02D62747EBDA002F4B88 /* CategoriesService.swift in Sources */,
 				510B02D42747EB4E002F4B88 /* Categories.swift in Sources */,
 				510B02A027469954002F4B88 /* ViewController.swift in Sources */,
+				510B02D92747ED69002F4B88 /* AdDetailView.swift in Sources */,
 				510B029C27469954002F4B88 /* AppDelegate.swift in Sources */,
 				510B029E27469954002F4B88 /* SceneDelegate.swift in Sources */,
 				510B02D22746B322002F4B88 /* ErrorCases.swift in Sources */,

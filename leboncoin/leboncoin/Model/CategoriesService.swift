@@ -24,10 +24,6 @@ class CategoriesService {
     
     // send a request to Leboncoin API and return this response
     func getCategories(completionHandler: @escaping (Categories?, Swift.Error?) -> Void) {
-        //        // get API Key
-        //        guard let apiKey = ApiKeyExtractor().apiKey else { return }
-        //        // get city chose by user
-        //        guard let encodedCity = city.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
         // call
         guard let request = URL(string: "https://raw.githubusercontent.com/leboncoin/paperclip/master/listing.json") else { return }
         task = categoriesSession.dataTask(with: request) {(data, rresponse, error) in DispatchQueue.main.async {
