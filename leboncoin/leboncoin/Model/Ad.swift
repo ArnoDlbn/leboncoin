@@ -23,3 +23,9 @@ struct AdImage: Decodable {
     let small: String?
     let thumb: String?
 }
+
+extension Ad {
+    var formattedCreationDate : String? {
+        DateFormatter.getFullDate(date: self.creation_date)
+    }
+}

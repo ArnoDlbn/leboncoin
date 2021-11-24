@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CBCFB60274D384400D54BAA /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBCFB5F274D384400D54BAA /* DateFormatter.swift */; };
+		1CBCFB62274D3B0900D54BAA /* Float+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBCFB61274D3B0900D54BAA /* Float+.swift */; };
 		510B029C27469954002F4B88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B029B27469954002F4B88 /* AppDelegate.swift */; };
 		510B029E27469954002F4B88 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B029D27469954002F4B88 /* SceneDelegate.swift */; };
 		510B02A527469957002F4B88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 510B02A427469957002F4B88 /* Assets.xcassets */; };
@@ -21,7 +23,7 @@
 		510B02D62747EBDA002F4B88 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02D52747EBDA002F4B88 /* CategoryService.swift */; };
 		510B02D92747ED69002F4B88 /* AdDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510B02D82747ED69002F4B88 /* AdDetailView.swift */; };
 		5174B89E2747F4A800F81BCF /* AdsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174B89D2747F4A800F81BCF /* AdsTableViewController.swift */; };
-		5174B8A02747F58E00F81BCF /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174B89F2747F58E00F81BCF /* UIViewController.swift */; };
+		5174B8A02747F58E00F81BCF /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174B89F2747F58E00F81BCF /* UIViewController+.swift */; };
 		5174B8A22747F6EA00F81BCF /* AdDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174B8A12747F6EA00F81BCF /* AdDetailViewController.swift */; };
 		5174B8A4274809AF00F81BCF /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174B8A3274809AF00F81BCF /* AdTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CBCFB5F274D384400D54BAA /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		1CBCFB61274D3B0900D54BAA /* Float+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Float+.swift"; sourceTree = "<group>"; };
 		510B029827469954002F4B88 /* leboncoin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leboncoin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		510B029B27469954002F4B88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		510B029D27469954002F4B88 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +66,7 @@
 		510B02D52747EBDA002F4B88 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		510B02D82747ED69002F4B88 /* AdDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDetailView.swift; sourceTree = "<group>"; };
 		5174B89D2747F4A800F81BCF /* AdsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsTableViewController.swift; sourceTree = "<group>"; };
-		5174B89F2747F58E00F81BCF /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		5174B89F2747F58E00F81BCF /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		5174B8A12747F6EA00F81BCF /* AdDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDetailViewController.swift; sourceTree = "<group>"; };
 		5174B8A3274809AF00F81BCF /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +96,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CBCFB63274D3B9500D54BAA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1CBCFB5F274D384400D54BAA /* DateFormatter.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1CBCFB64274D3BA600D54BAA /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				510B029B27469954002F4B88 /* AppDelegate.swift */,
+				510B02A427469957002F4B88 /* Assets.xcassets */,
+				510B02A627469957002F4B88 /* LaunchScreen.storyboard */,
+				510B029D27469954002F4B88 /* SceneDelegate.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		510B028F27469954002F4B88 = {
 			isa = PBXGroup;
 			children = (
@@ -116,14 +139,12 @@
 			isa = PBXGroup;
 			children = (
 				5174B89C2747F46D00F81BCF /* Controller */,
-				510B02D72747ED39002F4B88 /* View */,
 				510B02D02746B246002F4B88 /* Extension */,
 				510B02CB2746B05E002F4B88 /* Model */,
-				510B029B27469954002F4B88 /* AppDelegate.swift */,
-				510B029D27469954002F4B88 /* SceneDelegate.swift */,
-				510B02A427469957002F4B88 /* Assets.xcassets */,
-				510B02A627469957002F4B88 /* LaunchScreen.storyboard */,
 				510B02A927469957002F4B88 /* Info.plist */,
+				1CBCFB64274D3BA600D54BAA /* Supporting files */,
+				1CBCFB63274D3B9500D54BAA /* Utils */,
+				510B02D72747ED39002F4B88 /* View */,
 			);
 			path = leboncoin;
 			sourceTree = "<group>";
@@ -160,7 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				510B02D12746B322002F4B88 /* ErrorCases.swift */,
-				5174B89F2747F58E00F81BCF /* UIViewController.swift */,
+				1CBCFB61274D3B0900D54BAA /* Float+.swift */,
+				5174B89F2747F58E00F81BCF /* UIViewController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -316,12 +338,14 @@
 				510B02CD2746B077002F4B88 /* Ad.swift in Sources */,
 				510B02D62747EBDA002F4B88 /* CategoryService.swift in Sources */,
 				510B02D42747EB4E002F4B88 /* Category.swift in Sources */,
-				5174B8A02747F58E00F81BCF /* UIViewController.swift in Sources */,
+				5174B8A02747F58E00F81BCF /* UIViewController+.swift in Sources */,
+				1CBCFB60274D384400D54BAA /* DateFormatter.swift in Sources */,
 				510B02D92747ED69002F4B88 /* AdDetailView.swift in Sources */,
 				5174B8A22747F6EA00F81BCF /* AdDetailViewController.swift in Sources */,
 				510B029C27469954002F4B88 /* AppDelegate.swift in Sources */,
 				510B029E27469954002F4B88 /* SceneDelegate.swift in Sources */,
 				510B02D22746B322002F4B88 /* ErrorCases.swift in Sources */,
+				1CBCFB62274D3B0900D54BAA /* Float+.swift in Sources */,
 				5174B89E2747F4A800F81BCF /* AdsTableViewController.swift in Sources */,
 				510B02CF2746B1E4002F4B88 /* AdService.swift in Sources */,
 				5174B8A4274809AF00F81BCF /* AdTableViewCell.swift in Sources */,
